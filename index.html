@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampus Merdeka, Assignment 3</title>
+    <link rel="stylesheet" href="src/style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+</head>
+<body class="vh-100">
+    <div id="loading" class="d-none"></div>
+    <div class="container-fluid h-100 d-flex justify-content-center align-items-center">
+        <div class="card container-fluid p-5 w-50">
+            <h3 class="text-center">COVID-19 TRACKER</h3>
+            <div class="row my-2 justify-content-center align-items-center">
+                <div class="col-4">
+                    <input type="text" class="form-control" id="country" placeholder="Country Name">
+                </div>
+                <div class="col-4">
+                    <div class="input-group date" id="datepicker">
+                        <input type="text" id="dates" class="form-control">
+                        <span class="input-group-append">
+                          <span class="input-group-text bg-white d-block">
+                            <i class="fa fa-calendar"></i>
+                          </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <button id="getdata" type="button" class="btn btn-dark" onclick="show()">Get Data</button>
+                </div>
+            </div>
+            <div class="row my-2 justify-content-center align-items-center">
+                <div class="col-4 h-100">
+                    <div class="card text-center p-3">
+                        <img class="mx-auto" src="src/images/patient.png" alt="gambar" width="120px">
+                        <h5>Active Cases</h5>
+                        <p id="activecases">0</p>
+                    </div>
+                </div>
+                <div class="col-4 h-100">
+                    <div class="card text-center p-3">
+                        <img class="mx-auto" src="src/images/healthcare.png" alt="gambar" width="120px">
+                        <h5>New Cases</h5>
+                        <p id="newcases">0</p>
+                    </div>
+                </div>
+                <div class="col-4 h-100">
+                    <div class="card text-center p-3">
+                        <img class="mx-auto" src="src/images/search.png" alt="gambar" width="120px">
+                        <h5>Recovered Cases</h5>
+                        <p id="recoveredcases">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2 justify-content-center align-items-center">
+                <div class="col-4 h-100">
+                    <div class="card text-center p-3">
+                        <img class="mx-auto" src="src/images/checklist.png" alt="gambar" width="120px">
+                        <h5>Total Cases</h5>
+                        <p id="totalcases">0</p>
+                    </div>
+                </div>
+                <div class="col-4 h-100">
+                    <div class="card text-center p-3">
+                        <img class="mx-auto" src="src/images/tombstone.png" alt="gambar" width="120px">
+                        <h5>Total Deaths</h5>
+                        <p id="totaldeaths">0</p>
+                    </div>
+                </div>
+                <div class="col-4 h-100">
+                    <div class="card text-center p-3">
+                        <img class="mx-auto" src="src/images/testing.png" alt="gambar" width="120px">
+                        <h5>Total Test</h5>
+                        <p id="totaltest">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/script/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
